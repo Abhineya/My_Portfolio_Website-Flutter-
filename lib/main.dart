@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/achievement.dart';
 import 'package:portfolio/navbar.dart';
 import 'package:portfolio/profile.dart';
 
@@ -24,21 +25,24 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-          image: DecorationImage(
-              image: AssetImage('assets/images/background.png'),
-              fit: BoxFit.cover)),
-      child: Padding(
-        padding: EdgeInsets.fromLTRB(40, 20, 40, 20),
-        child: Column(
-          children: [
-            Navbar(),
-            SizedBox(
-              height: 40,
-            ),
-            ProfilePage(),
-          ],
+    return SingleChildScrollView(
+      child: Container(
+        decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage('assets/images/background.png'),
+                fit: BoxFit.cover)),
+        child: Padding(
+          padding: EdgeInsets.fromLTRB(40, 20, 40, 20),
+          child: Column(
+            children: [
+              Navbar(),
+              SizedBox(
+                height: 40,
+              ),
+              ProfilePage(),
+              AchievementPage(),
+            ],
+          ),
         ),
       ),
     );

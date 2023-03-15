@@ -43,7 +43,7 @@ Widget _desktopNavbar() {
                 'RESUME',
                 style: TextStyle(
                     color: Colors.white,
-                    fontFamily: 'Kalam',
+                     fontFamily: 'Sriracha',
                     fontSize: 20,
                     fontWeight: FontWeight.w300,
                     decoration: TextDecoration.none),
@@ -60,9 +60,9 @@ Widget _desktopNavbar() {
             navButton('PROJECTS'),
           ],
         ),
-        // SizedBox(
-        //   width: 40,
-        // )
+        SizedBox(
+          width: 30,
+        )
       ],
     ),
   );
@@ -76,8 +76,50 @@ Widget navButton(String text) {
           child:
               Text(text, style: TextStyle(
                     color: Colors.white,
-                    fontFamily: 'Kalam',
+                     fontFamily: 'Sriracha',
                     fontSize: 20,
                     fontWeight: FontWeight.w300,
                     decoration: TextDecoration.none),)));
 }
+   // Padding(
+                  //   padding: const EdgeInsets.only(
+                  //     top: 15,
+                  //   ),
+                  //   child: Text(
+                  //     'Alpha-MLSA',
+                  //     style: TextStyle(
+                  //   color: Colors.white,
+                  //   fontFamily: 'Kalam',
+                  //   fontSize: 25,
+                  //   fontWeight: FontWeight.w300,
+                  //   decoration: TextDecoration.none),
+                  //   ),
+                  // ),
+                  // Padding(
+                  //   padding: const EdgeInsets.only(
+                  //     top: 15,
+                  //   ),
+                  //   child: Text(
+                  //     'Tech-Executive at GDSC BSIOTR',
+                  //     style: TextStyle(
+                  //   color: Colors.white,
+                  //   fontFamily: 'Kalam',
+                  //   fontSize: 25,
+                  //   fontWeight: FontWeight.w300,
+                  //   decoration: TextDecoration.none),
+                  //   ),
+                  // ),
+                  // Padding(
+                  //   padding: const EdgeInsets.only(
+                  //     top: 15,
+                  //   ),
+                  //   child: Text(
+                  //     'Tech-Associate at MLSC BSIOTR',
+                  //     style: TextStyle(
+                  //   color: Colors.white,
+                  //   fontFamily: 'Kalam',
+                  //   fontSize: 25,
+                  //   fontWeight: FontWeight.w300,
+                  //   decoration: TextDecoration.none),
+                  //   ),
+                  // ),

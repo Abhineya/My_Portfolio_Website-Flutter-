@@ -34,6 +34,7 @@ dependencies:
   responsive_builder: ^0.6.4
   flip_card: ^0.7.0
   fine_icons: ^0.1.1
+  hover_effect: ^0.6.0
 
 dev_dependencies:
   # The "flutter_lints" package below contains a set of recommended lints to
@@ -57,6 +58,11 @@ flutter:
   assets:
     - assets/images/profilepic.png
     - assets/images/background.png
+    - assets/images/github.png
+    - assets/images/linkedin.png
+    - assets/images/twitter.png
+    - assets/images/instagram.png
+    - assets/images/hashnode.png
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
@@ -76,6 +82,9 @@ flutter:
     - family: Courgette
       fonts:
         - asset: assets/fonts/Courgette-Regular.ttf
+    - family: Sriracha
+      fonts:
+        - asset: assets/fonts/Sriracha-Regular.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
