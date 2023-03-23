@@ -3,6 +3,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flip_card/flip_card.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
@@ -94,27 +95,71 @@ Widget _desktopProfile(BuildContext context) {
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                iconContainer('assets/images/linkedin.png'),
+                Material(
+                  child: InkWell(
+                      onTap: () {
+                        launchUrl(Uri.parse(
+                            'https://www.linkedin.com/in/abhineya-beduru/'));
+                      },
+                      child: iconContainer('assets/images/linkedin.png')),
+                ),
                 SizedBox(
                   width: 30,
                 ),
-                iconContainer('assets/images/github.png'),
+                Material(
+                  child: InkWell(
+                      onTap: () {
+                        launchUrl(Uri.parse('https://github.com/Abhineya'));
+                      },
+                      child: iconContainer('assets/images/github.png')),
+                ),
                 SizedBox(
                   width: 30,
                 ),
-                iconContainer('assets/images/instagram.png'),
+                Material(
+                  child: InkWell(
+                      onTap: () {
+                        launchUrl(
+                            Uri.parse('https://www.instagram.com/abhineyaaa/'));
+                      },
+                      child: iconContainer('assets/images/instagram.png')),
+                ),
                 SizedBox(
                   width: 30,
                 ),
-                iconContainer('assets/images/twitter.png'),
+                Material(
+                  child: InkWell(
+                      onTap: () {
+                        launchUrl(
+                            Uri.parse('https://twitter.com/abhineya_beduru'));
+                      },
+                      child: iconContainer('assets/images/twitter.png')),
+                ),
                 SizedBox(
                   width: 30,
                 ),
-                iconContainer('assets/images/hashnode.png'),
+                Material(
+                  child: InkWell(
+                      onTap: () {
+                        launchUrl(
+                            Uri.parse('https://hashnode.com/@AbhineyaBeduru'));
+                      },
+                      child: iconContainer('assets/images/hashnode.png')),
+                ),
                 SizedBox(
                   width: 30,
                 ),
-                iconContainer('assets/images/gdsc.png'),
+                Material(
+                  child: InkWell(
+                      onTap: () {
+                        launchUrl(Uri.parse(
+                                'https://developers.google.com/profile/u/Abhineya')
+                            // 'https://developers.google.com/profile/u/Abhineya'
+                            //     as Uri
+                            );
+                      },
+                      child: iconContainer('assets/images/gdsc.png')),
+                ),
               ],
             )
           ]),

@@ -11,6 +11,21 @@ class AchievementPage extends StatefulWidget {
 }
 
 class _AchievementPageState extends State<AchievementPage> {
+  List list = [
+    {
+      "image": "assets/images/mlsa.png",
+      "content": "I have been selected as Microsoft Learn Student Ambassador"
+    },
+    {
+      "image": "assets/images/mlsa.png",
+      "content": "I have been selected as Microsoft Learn Student Ambassador"
+    },
+    {
+      "image": "assets/images/mlsa.png",
+      "content": "I have been selected as Microsoft Learn Student Ambassador"
+    },
+  ];
+
   @override
   Widget build(BuildContext context) {
     return ScreenTypeLayout.builder(
@@ -22,8 +37,8 @@ class _AchievementPageState extends State<AchievementPage> {
 }
 
 Widget _desktopAchievement(BuildContext context) {
-  List<String> imageurl = [
-    'assets/images/instagram.png',
+  List<String> _imageurl = [
+    'assets/images/mlsa.png',
     'assets/images/instagram.png',
     'assets/images/instagram.png',
     'assets/images/instagram.png',
@@ -31,6 +46,7 @@ Widget _desktopAchievement(BuildContext context) {
     'assets/images/instagram.png',
     'assets/images/instagram.png',
   ];
+
   LinearGradient color = LinearGradient(
     begin: Alignment.centerLeft,
     end: Alignment.centerRight,
@@ -44,29 +60,34 @@ Widget _desktopAchievement(BuildContext context) {
     ),
     child: Column(
       children: [
-        SizedBox(height: 40,),
+        SizedBox(
+          height: 40,
+        ),
         Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            SizedBox(width: 80,),
-            Text('ACHIEVEMENTS', style: TextStyle(
-              color: Colors.black87,
-              fontFamily: 'Sriracha',
+            SizedBox(
+              width: 80,
+            ),
+            Text(
+              'ACHIEVEMENTS',
+              style: TextStyle(
+                  color: Colors.black87,
+                  fontFamily: 'Sriracha',
                   fontSize: 30,
-                  decoration: TextDecoration.none
-                ),),
+                  decoration: TextDecoration.none),
+            ),
           ],
         ),
         Expanded(
           child: ListView.builder(
-            // shrinkWrap: true,
+              // shrinkWrap: true,
               scrollDirection: Axis.horizontal,
-              itemCount: imageurl.length,
+              itemCount: _imageurl.length,
               itemBuilder: (BuildContext context, int index) {
                 return Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                   
                     Padding(
                       padding: const EdgeInsets.only(left: 30, right: 30),
                       child: ClipRRect(
@@ -91,7 +112,7 @@ Widget _desktopAchievement(BuildContext context) {
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(20),
                                       child: Image(
-                                        image: AssetImage(imageurl[index]),
+                                        image: AssetImage(_imageurl[index]),
                                         fit: BoxFit.fill,
                                       ),
                                     )),
@@ -100,9 +121,10 @@ Widget _desktopAchievement(BuildContext context) {
                                 padding: const EdgeInsets.only(
                                     top: 0, left: 10, right: 10, bottom: 0),
                                 child: Text(
-                                  'gshgfsugfhjsbshkfuiwfkjsbfuisrhf',
+                               'gfdgdgfdhgdujhd',
+                                  // _content[index],
                                   style: TextStyle(
-                                      color: Colors.black54,
+                                      color: Colors.white,
                                       fontSize: 20,
                                       decoration: TextDecoration.none),
                                 ),
