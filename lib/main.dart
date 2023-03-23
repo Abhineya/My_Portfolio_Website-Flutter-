@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/achievement.dart';
 import 'package:portfolio/navbar.dart';
 import 'package:portfolio/profile.dart';
+import 'package:portfolio/skills.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,15 +33,24 @@ class HomePage extends StatelessWidget {
                 image: AssetImage('assets/images/background.png'),
                 fit: BoxFit.cover)),
         child: Padding(
-          padding: EdgeInsets.fromLTRB(40, 20, 40, 20),
+          // padding: EdgeInsets.fromLTRB(40, 20, 40, 20),
+          padding: EdgeInsets.all(0),
           child: Column(
             children: [
-              Navbar(),
+              Padding(
+                padding: EdgeInsets.fromLTRB(40, 20, 40, 20),
+                child: Navbar(),
+              ),
               SizedBox(
                 height: 40,
               ),
-              ProfilePage(),
+              Padding(
+                padding: EdgeInsets.fromLTRB(40, 20, 40, 20),
+                child: ProfilePage(),
+              ),
               AchievementPage(),
+              SkillPage(),
+
             ],
           ),
         ),
