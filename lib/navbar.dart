@@ -1,6 +1,10 @@
+import 'dart:js';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:portfolio/achievement.dart';
+import 'package:portfolio/main.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 class Navbar extends StatefulWidget {
@@ -15,13 +19,13 @@ class _NavbarState extends State<Navbar> {
   Widget build(BuildContext context) {
     return ScreenTypeLayout.builder(
       desktop: (BuildContext context) {
-        return _desktopNavbar();
+        return _desktopNavbar(context);
       },
     );
   }
 }
 
-Widget _desktopNavbar() {
+Widget _desktopNavbar(BuildContext context) {
   LinearGradient color = LinearGradient(
     begin: Alignment.centerLeft,
     end: Alignment.centerRight,
@@ -43,7 +47,7 @@ Widget _desktopNavbar() {
                 'RESUME',
                 style: TextStyle(
                     color: Colors.white,
-                     fontFamily: 'Sriracha',
+                    fontFamily: 'Sriracha',
                     fontSize: 20,
                     fontWeight: FontWeight.w300,
                     decoration: TextDecoration.none),
@@ -54,7 +58,13 @@ Widget _desktopNavbar() {
         Spacer(),
         Row(
           children: [
-            navButton('HOME'),
+            GestureDetector(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return AchievementPage();
+                  }));
+                },
+                child: navButton('HOME')),
             navButton('ACHIEVEMENTS'),
             navButton('SKILLS'),
             navButton('PROJECTS'),
@@ -73,13 +83,15 @@ Widget navButton(String text) {
       margin: EdgeInsets.symmetric(horizontal: 4),
       child: TextButton(
           onPressed: () {},
-          child:
-              Text(text, style: TextStyle(
-                    color: Colors.white,
-                     fontFamily: 'Sriracha',
-                    fontSize: 20,
-                    fontWeight: FontWeight.w300,
-                    decoration: TextDecoration.none),)));
+          child: Text(
+            text,
+            style: TextStyle(
+                color: Colors.white,
+                fontFamily: 'Sriracha',
+                fontSize: 20,
+                fontWeight: FontWeight.w300,
+                decoration: TextDecoration.none),
+          )));
 }
    // Padding(
                   //   padding: const EdgeInsets.only(

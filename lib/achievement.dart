@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class AchievementPage extends StatefulWidget {
   const AchievementPage({super.key});
@@ -11,21 +12,6 @@ class AchievementPage extends StatefulWidget {
 }
 
 class _AchievementPageState extends State<AchievementPage> {
-  List list = [
-    {
-      "image": "assets/images/mlsa.png",
-      "content": "I have been selected as Microsoft Learn Student Ambassador"
-    },
-    {
-      "image": "assets/images/mlsa.png",
-      "content": "I have been selected as Microsoft Learn Student Ambassador"
-    },
-    {
-      "image": "assets/images/mlsa.png",
-      "content": "I have been selected as Microsoft Learn Student Ambassador"
-    },
-  ];
-
   @override
   Widget build(BuildContext context) {
     return ScreenTypeLayout.builder(
@@ -37,16 +23,6 @@ class _AchievementPageState extends State<AchievementPage> {
 }
 
 Widget _desktopAchievement(BuildContext context) {
-  List<String> _imageurl = [
-    'assets/images/mlsa.png',
-    'assets/images/instagram.png',
-    'assets/images/instagram.png',
-    'assets/images/instagram.png',
-    'assets/images/instagram.png',
-    'assets/images/instagram.png',
-    'assets/images/instagram.png',
-  ];
-
   LinearGradient color = LinearGradient(
     begin: Alignment.centerLeft,
     end: Alignment.centerRight,
@@ -79,68 +55,118 @@ Widget _desktopAchievement(BuildContext context) {
             ),
           ],
         ),
-        Expanded(
-          child: ListView.builder(
-              // shrinkWrap: true,
-              scrollDirection: Axis.horizontal,
-              itemCount: _imageurl.length,
-              itemBuilder: (BuildContext context, int index) {
-                return Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 30, right: 30),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(40),
-                        child: Container(
-                          height: 400,
-                          width: 350,
-                          decoration: BoxDecoration(
-                              gradient: LinearGradient(
-                            begin: Alignment.bottomCenter,
-                            end: Alignment.topCenter,
-                            colors: [Colors.black87, Colors.black12],
-                          )),
-                          child: Column(
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.only(
-                                    top: 20, left: 10, right: 10, bottom: 20),
-                                child: Container(
-                                    height: 220,
-                                    width: 300,
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(20),
-                                      child: Image(
-                                        image: AssetImage(_imageurl[index]),
-                                        fit: BoxFit.fill,
-                                      ),
-                                    )),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(
-                                    top: 0, left: 10, right: 10, bottom: 0),
-                                child: Text(
-                               'gfdgdgfdhgdujhd',
-                                  // _content[index],
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 20,
-                                      decoration: TextDecoration.none),
-                                ),
-                              ),
-                            ],
+        SizedBox(
+          height: 40,
+        ),
+        SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children: [
+              GestureDetector(
+                onTap: () {
+                  launchUrl(Uri.parse(
+                      'https://www.linkedin.com/feed/update/urn:li:activity:7021745270048571392/'));
+                },
+                child: achievementContainer('assets/images/mlsa.png',
+                    ' I have been selected as Microsoft Learn Student Ambassador.'),
+              ),
+              GestureDetector(
+                onTap: () {
+                  launchUrl(Uri.parse(
+                      'https://www.linkedin.com/feed/update/urn:li:activity:7041853585868873728/'));
+                },
+                child: achievementContainer(
+                    'assets/images/flutterbootcamp.png',
+                    ' I conducted Bootcamp on Flutter under GDSC BSIOTR.'),
+              ),
+              GestureDetector(
+                onTap: () {
+                  launchUrl(Uri.parse(
+                      'https://www.linkedin.com/feed/update/urn:li:activity:7044647845575991297/'));
+                },
+                child: achievementContainer('assets/images/reckon.png',
+                    ' I have recently participated in RECKON 4.0 with my team at Jodhpur, Rajasthan.'),
+              ),
+              GestureDetector(
+                onTap: () {
+                  launchUrl(Uri.parse(
+                      'https://www.linkedin.com/feed/update/urn:li:activity:7007744191459930112/'));
+                },
+                child: achievementContainer('assets/images/devfest.png',
+                    ' I have won ticket to Devfest\'22 Pune in blog writing competition. '),
+              ),
+              GestureDetector(
+                onTap: () {
+                  launchUrl(Uri.parse(
+                      'https://www.linkedin.com/feed/update/urn:li:activity:6970007847774433280/'));
+                },
+                child: achievementContainer('assets/images/sih.png',
+                    ' Our team got selected as Grand Finalist for SIH\'22'),
+              ),
+            ],
+          ),
+        )
+      ],
+    ),
+  );
+}
+
+Widget achievementContainer(String imageurl, String content) {
+  return Container(
+    child: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Padding(
+          padding: const EdgeInsets.only(left: 30, right: 30),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(40),
+            child: Container(
+              height: 400,
+              width: 350,
+              decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                begin: Alignment.bottomCenter,
+                end: Alignment.topCenter,
+                colors: [Colors.black87, Colors.black12],
+              )),
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(
+                        top: 20, left: 10, right: 10, bottom: 20),
+                    child: Container(
+                        height: 220,
+                        width: 300,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(20),
+                          child: Image(
+                            image: AssetImage(imageurl),
+                            fit: BoxFit.fill,
                           ),
-                        ),
+                        )),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(
+                        top: 0, left: 40, right: 30, bottom: 0),
+                    child: Center(
+                      child: Text(
+                        content,
+                        style: TextStyle(
+                            fontFamily: 'Sriracha',
+                            color: Colors.white,
+                            fontSize: 20,
+                            decoration: TextDecoration.none),
                       ),
                     ),
-                    // SizedBox(
-                    //   width: 30,
-                    // ),
-                  ],
-                );
-              }),
+                  ),
+                ],
+              ),
+            ),
+          ),
         ),
+        // SizedBox(
+        //   width: 30,
+        // ),
       ],
     ),
   );

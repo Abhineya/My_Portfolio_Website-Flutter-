@@ -95,71 +95,56 @@ Widget _desktopProfile(BuildContext context) {
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Material(
-                  child: InkWell(
-                      onTap: () {
-                        launchUrl(Uri.parse(
-                            'https://www.linkedin.com/in/abhineya-beduru/'));
-                      },
-                      child: iconContainer('assets/images/linkedin.png')),
-                ),
+                GestureDetector(
+                    onTap: () {
+                      launchUrl(Uri.parse(
+                          'https://www.linkedin.com/in/abhineya-beduru/'));
+                    },
+                    child: iconContainer('assets/images/linkedin.png')),
                 SizedBox(
                   width: 30,
                 ),
-                Material(
-                  child: InkWell(
-                      onTap: () {
-                        launchUrl(Uri.parse('https://github.com/Abhineya'));
-                      },
-                      child: iconContainer('assets/images/github.png')),
-                ),
+                GestureDetector(
+                    onTap: () {
+                      launchUrl(Uri.parse('https://github.com/Abhineya'));
+                    },
+                    child: iconContainer('assets/images/github.png')),
                 SizedBox(
                   width: 30,
                 ),
-                Material(
-                  child: InkWell(
-                      onTap: () {
-                        launchUrl(
-                            Uri.parse('https://www.instagram.com/abhineyaaa/'));
-                      },
-                      child: iconContainer('assets/images/instagram.png')),
-                ),
+                GestureDetector(
+                    onTap: () {
+                      launchUrl(
+                          Uri.parse('https://www.instagram.com/abhineyaaa/'));
+                    },
+                    child: iconContainer('assets/images/instagram.png')),
                 SizedBox(
                   width: 30,
                 ),
-                Material(
-                  child: InkWell(
-                      onTap: () {
-                        launchUrl(
-                            Uri.parse('https://twitter.com/abhineya_beduru'));
-                      },
-                      child: iconContainer('assets/images/twitter.png')),
-                ),
+                GestureDetector(
+                    onTap: () {
+                      launchUrl(
+                          Uri.parse('https://twitter.com/abhineya_beduru'));
+                    },
+                    child: iconContainer('assets/images/twitter.png')),
                 SizedBox(
                   width: 30,
                 ),
-                Material(
-                  child: InkWell(
-                      onTap: () {
-                        launchUrl(
-                            Uri.parse('https://hashnode.com/@AbhineyaBeduru'));
-                      },
-                      child: iconContainer('assets/images/hashnode.png')),
-                ),
+                GestureDetector(
+                    onTap: () {
+                      launchUrl(
+                          Uri.parse('https://hashnode.com/@AbhineyaBeduru'));
+                    },
+                    child: iconContainer('assets/images/hashnode.png')),
                 SizedBox(
                   width: 30,
                 ),
-                Material(
-                  child: InkWell(
-                      onTap: () {
-                        launchUrl(Uri.parse(
-                                'https://developers.google.com/profile/u/Abhineya')
-                            // 'https://developers.google.com/profile/u/Abhineya'
-                            //     as Uri
-                            );
-                      },
-                      child: iconContainer('assets/images/gdsc.png')),
-                ),
+                GestureDetector(
+                    onTap: () {
+                      launchUrl(Uri.parse(
+                          'https://developers.google.com/profile/u/Abhineya'));
+                    },
+                    child: iconContainer('assets/images/gdsc.png')),
               ],
             )
           ]),

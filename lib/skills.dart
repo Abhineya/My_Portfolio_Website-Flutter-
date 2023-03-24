@@ -3,6 +3,15 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
+
+
+  // 'https://www.linkedin.com/feed/update/urn:li:activity:7021745270048571392/'
+  // 'https://www.linkedin.com/feed/update/urn:li:activity:7041853585868873728/'
+  // 'https://www.linkedin.com/feed/update/urn:li:activity:7044647845575991297/'
+  // 'https://www.linkedin.com/feed/update/urn:li:activity:7007744191459930112/'
+  // 'https://www.linkedin.com/feed/update/urn:li:activity:6970007847774433280/'
+
+
 class SkillPage extends StatelessWidget {
   const SkillPage({super.key});
 
@@ -15,13 +24,6 @@ class SkillPage extends StatelessWidget {
 }
 
 Widget _desktopSkillPage(BuildContext context) {
-  // List skills = [
-  //   'assets/images/flutter.png',
-  //   'assets/images/flutter.png',
-  //   'assets/images/flutter.png',
-  //   'assets/images/flutter.png',
-  //   'assets/images/flutter.png',
-  // ];
   return Container(
     width: MediaQuery.of(context).size.width,
     height: MediaQuery.of(context).size.height,
