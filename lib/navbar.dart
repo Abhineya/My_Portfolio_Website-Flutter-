@@ -93,45 +93,4 @@ Widget navButton(String text) {
                 decoration: TextDecoration.none),
           )));
 }
-   // Padding(
-                  //   padding: const EdgeInsets.only(
-                  //     top: 15,
-                  //   ),
-                  //   child: Text(
-                  //     'Alpha-MLSA',
-                  //     style: TextStyle(
-                  //   color: Colors.white,
-                  //   fontFamily: 'Kalam',
-                  //   fontSize: 25,
-                  //   fontWeight: FontWeight.w300,
-                  //   decoration: TextDecoration.none),
-                  //   ),
-                  // ),
-                  // Padding(
-                  //   padding: const EdgeInsets.only(
-                  //     top: 15,
-                  //   ),
-                  //   child: Text(
-                  //     'Tech-Executive at GDSC BSIOTR',
-                  //     style: TextStyle(
-                  //   color: Colors.white,
-                  //   fontFamily: 'Kalam',
-                  //   fontSize: 25,
-                  //   fontWeight: FontWeight.w300,
-                  //   decoration: TextDecoration.none),
-                  //   ),
-                  // ),
-                  // Padding(
-                  //   padding: const EdgeInsets.only(
-                  //     top: 15,
-                  //   ),
-                  //   child: Text(
-                  //     'Tech-Associate at MLSC BSIOTR',
-                  //     style: TextStyle(
-                  //   color: Colors.white,
-                  //   fontFamily: 'Kalam',
-                  //   fontSize: 25,
-                  //   fontWeight: FontWeight.w300,
-                  //   decoration: TextDecoration.none),
-                  //   ),
-                  // ),
+  

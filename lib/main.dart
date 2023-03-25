@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/achievement.dart';
 import 'package:portfolio/navbar.dart';
 import 'package:portfolio/profile.dart';
+import 'package:portfolio/projects.dart';
 import 'package:portfolio/skills.dart';
 
 void main() {
@@ -50,7 +51,7 @@ class HomePage extends StatelessWidget {
               ),
               AchievementPage(),
               SkillPage(),
-
+              ProjectPage(),
             ],
           ),
         ),
